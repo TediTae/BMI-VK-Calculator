@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>BMI Calculator</title>
+        <link rel="stylesheet" href="hesaplama.css">
+    </head>
+    <script type="text/javascript">
+        function BMI(){
+            var h=document.getElementById('h').value;
+            var w=document.getElementById('w').value;
+            var bmi=w/(h/100*h/100);
+            var bmio=(bmi.toFixed(2));
+
+            document.getElementById("result").innerHTML="Your BMI is " + bmio;
+        }
+    </script>
+    <body>
+        <form action="/hesaplar/Hesaplama" method="POST">
+        <div class="hesap">
+        <h2>BMI Calculator</h2>
+        <p class="text">Height</p>
+        <input type="text" name="boy" id="h">
+        <p class="text">weight</p>
+        <input type="text" name="kilo" id="w">
+        <p id="result"></p>
+        <button id="btn" name="" onclick="BMI()">Calculate</button>
+        <p id="info">Lütfen Boyunuzu [cm] ve kilonuzu [kg] cinsinden giriniz.</p>
+    </div>
+    </form>
+    </body>
+</html> 

@@ -1,0 +1,43 @@
+const express = require('express')
+const router = express.Router()
+const User = require('../models/User')
+var mongo = require('mongodb');
+
+router.get('/register', (req, res) => {
+    res.render('site/register')
+})
+
+/*router.post('/register', (req, res) => {
+    console.log(req.body)
+     res.redirect('/')*/
+
+     router.post('/register', (req, res) => {
+        User.create(req.body)
+         res.redirect('/')
+
+})
+
+router.get('/login', (req, res)=>{
+    res.render('site/login')
+  })
+
+ router.post('/login', (req, res) => {
+  res.redirect('/')
+    /*const {username, password} = req.body
+    User.findOne({username}), (error, user) => {
+      if(user){
+        if(user.password == password){
+          res.redirect('/')
+        }
+        else{
+          res.redirect('/users/login') 
+        }
+      }
+      else{
+        res.redirect('/users/register')
+      }
+    }   */
+  })
+
+
+module.exports = router

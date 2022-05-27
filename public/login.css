@@ -1,0 +1,60 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background: url("https://img.freepik.com/free-vector/painted-background-multicoloured-palette_23-2148427592.jpg?w=2000");
+    background-size: cover;
+}
+.box{
+    width: 300px;
+    padding: 30px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+.box h1{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+
+}
+.box input[type="text"], .box input[type="password"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid #5f27cd ;
+    padding: 14px , 10px;
+    width: 220px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25px;
+    height: 50px;
+}
+.box input[type="text"], .box input[type="password"] :focus{
+    width: 270px;
+    border-color: #ff6b6b;
+}
+.box input[type="submit"]{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid #ff6b6b ;
+    padding: 14px , 10px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25px;
+    cursor: pointer;
+    height: 50px;
+    width: 100px;
+}
+.box input[type="submit"]:hover{
+    background: #ff6b6b;
+   
+}
